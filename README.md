@@ -1,15 +1,15 @@
-# CopyBucket
+# ClipinVault
 
-CopyBucket is a clipboard utility to collect, search, and paste what you copy.
+ClipinVault is a clipboard utility to collect, search, and paste what you copy.
 
 ## Visit our Website
 
-Visit the [CopyBucket Landing Page](index.html) for a complete feature overview and download links.
+Visit the [ClipinVault Landing Page](index.html) for a complete feature overview and download links.
 
 ## Quick Download
 
-- **Windows**: [Download .exe](downloads/windows/CopyBucketSetup.exe)
-- **Linux (Ubuntu)**: [Download Binary](downloads/ubuntu/copybucket)
+- **Windows**: [Download .exe](downloads/windows/ClipinVaultSetup.exe)
+- **Linux (Ubuntu)**: [Download Binary](downloads/ubuntu/clipinvault)
 
 ## Shortcut
 
