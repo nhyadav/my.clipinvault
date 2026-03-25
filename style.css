@@ -269,13 +269,14 @@ nav {
   margin-bottom: 1.5rem;
 }
 .btn {
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 2.2rem;
   border-radius: 99px;
   font-weight: 600;
   font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
+  gap: 0.8rem;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: 1px solid transparent;
@@ -626,12 +627,14 @@ nav {
 }
 .req-card {
   background: var(--bg-card);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 20px;
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
   transition: all 0.3s ease;
 }
 .req-card:hover {
@@ -1033,4 +1036,92 @@ footer {
   .req-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+/* ===== SUB-PAGE SHARED STYLES ===== */
+.subpage-hero {
+  padding: 100px 4% 40px;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.05), transparent);
+  text-align: center;
+}
+.subpage-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 0.8rem;
+}
+.content-section {
+  padding: 24px 4% 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.content-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+.content-card h2 {
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+.content-card h2:first-child {
+  margin-top: 0;
+}
+.content-card p {
+  color: var(--text2);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.content-card ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  color: var(--text2);
+}
+.content-card li {
+  margin-bottom: 0.5rem;
+}
+.last-updated {
+  font-size: 0.85rem;
+  color: var(--text3);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* Changelog specific */
+.changelog-item {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.changelog-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+}
+.version-tag {
+  background: var(--code-bg);
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+.version-date {
+  color: var(--text3);
+  font-size: 0.9rem;
+}
+.changelog-downloads {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changelog-ClipinVault</title>
+    <meta name="description" content="Version history for ClipinVault. See what changed in each release." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://clipinvault.com/changelog/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clipinvault.com/changelog/" />
+    <meta property="og:title" content="Changelog — ClipinVault" />
+    <meta property="og:description" content="Full version history for ClipinVault clipboard manager." />
+    <meta property="og:image" content="https://clipinvault.com/assets/og-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://clipinvault.com/assets/og-preview.png" />
+    <link rel="icon" type="image/png" href="../assets/appicon.png?v=2" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a href="../" class="logo">
+          <img src="../assets/appicon.png?v=2" alt="ClipinVault Logo" class="logo-img" width="32" height="32" />
+          <span class="logo-text">
+            <span class="logo-clipin">Clipin</span><span class="logo-vault">Vault</span>
+          </span>
+        </a>
+        <div class="nav-right">
+          <div class="nav-links" id="navLinks">
+            <a href="../#features">Features</a>
+            <a href="../#requirements">Requirements</a>
+            <a href="../#download">Download</a>
+            <a href="../about/">About</a>
+            <a href="../changelog/">Changelog</a>
+            <a href="../privacy/">Privacy</a>
+          </div>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+            <svg class="icon-sun" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
+            <svg class="icon-moon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="subpage-hero">
+        <div class="hero-badge">Version History</div>
+        <h1>Change<span class="gradient-text">log</span></h1>
+        <p class="hero-sub">What's new, what's fixed, and what's next.</p>
+
+          <div class="changelog-item">
+            <h2><span class="version-tag">v1.3.3</span> <span class="version-date">March 25, 2026</span></h2>
+            <ul>
+              <li>Added tag-based content types: URL, Code, JSON, SQL, Command, MFA, Secrets, and Image clips alongside regular text.</li>
+              <li>Clipboard now captures formatting — pastes retain the original structure of copied content.</li>
+              <li>New preview button lets you view the full content of any clip before pasting.</li>
+              <li>Paste options: choose to paste with or without formatting depending on the target.</li>
+              <li>Image clips now support download and export — save captured screenshots directly from the vault.</li>
+              <li>Redesigned icon and theme for a more professional, polished look.</li>
+              <li>Full space utilization with a row-based layout for better readability across screen sizes.</li>
+              <li>Auto-clean scheduler: unused clips with zero usage are cleared automatically to keep ClipinVault stable and lean.</li>
+            </ul>
+            <div class="changelog-downloads">
+              <a href="../downloads/windows/ClipinVaultSetup.exe" class="btn btn-primary btn-sm">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9"/><rect x="13" y="2" width="9" height="9"/><rect x="2" y="13" width="9" height="9"/><rect x="13" y="13" width="9" height="9"/></svg>
+                Download
+              </a>
+              <a href="../downloads/ubuntu/clipinvault_1.3.1_amd64.deb" class="btn btn-outline btn-sm" download>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="4.5" r="1.8"/><circle cx="5.5" cy="16" r="1.8"/><circle cx="18.5" cy="16" r="1.8"/></svg>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <div class="changelog-item">
+            <h2><span class="version-tag">v1.2.3</span> <span class="version-date">February 28, 2026</span></h2>
+            <ul>
+              <li>Change content type from text to secret to encrypt data — use this only for credentials. Encryption key is stored in the Windows Key Manager or equivalent on other OS.</li>
+              <li>Pin content to keep it visible on top of the list at all times.</li>
+              <li>Filter and search are now available across all clips.</li>
+              <li>Set a title for any content to remember context, such as which account's password was copied.</li>
+              <li>Paste any content anywhere with a single click.</li>
+              <li>Supports three content types without formatting: Text, Secret, and Image.</li>
+              <li>Captures screenshots and image copies — supports only text and image types for copy-paste.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../assets/appicon.png?v=2" alt="ClipinVault" width="24" height="24" />
+          <span class="logo-text" style="font-size: 1.1rem">
+            <span class="logo-clipin">Clipin</span><span class="logo-vault">Vault</span>
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="../#features">Features</a>
+          <a href="../#requirements">Requirements</a>
+          <a href="../#download">Download</a>
+          <a href="../about/">About</a>
+          <a href="../changelog/">Changelog</a>
+          <a href="../privacy/">Privacy</a>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 ClipinVault. All rights reserved. Designed and developed by
+          <a href="https://github.com/nhyadav">Narayan Yadav</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("themeToggle");
+      const html = document.documentElement;
+      const stored = localStorage.getItem("cv-theme");
+      if (stored) html.setAttribute("data-theme", stored);
+      else if (window.matchMedia("(prefers-color-scheme: light)").matches) html.setAttribute("data-theme", "light");
+      toggle.addEventListener("click", () => {
+        const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("cv-theme", next);
+      });
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("active");
+      });
+      navLinks.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+        }),
+      );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document.querySelectorAll(".anim-fade").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
