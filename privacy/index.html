@@ -96,82 +96,74 @@
       </nav>
     </header>
 
-    <main>
-      <section class="subpage-hero">
+    <main class="privacy-page">
+      <section class="about-hero anim-fade">
         <div class="hero-badge">Your Data, Your Device</div>
         <h1>Privacy <span class="gradient-text">Policy</span></h1>
-        <p class="hero-sub">
-          Short version: we don't collect anything. Here are the details.
-        </p>
+        <p class="hero-sub">Short version: we don't collect anything. All your clipboard data stays strictly on your machine.</p>
         <span class="last-updated">Last Updated: March 25, 2026</span>
+      </section>
 
-        <h2>1. What the App Collects</h2>
-        <p>
-          Nothing leaves your machine. ClipinVault stores all clipboard data —
-          text, images, and formatting — in a local SQLite database on your
-          device. There are no servers involved. There is no telemetry. There is
-          no usage tracking. The app works entirely offline.
-        </p>
+      <section class="privacy-content container anim-fade">
+        <div class="privacy-section">
+          <div class="section-header-block">
+            <div class="section-tag">01. Data Collection</div>
+            <h2>What the App Collects</h2>
+          </div>
+          <div class="section-content-block">
+            <p>Nothing leaves your machine. ClipinVault stores all clipboard data — text, images, and formatting — in a local SQLite database on your device. There are no servers involved, no telemetry, and no usage tracking. The app works entirely offline.</p>
+          </div>
+        </div>
 
-        <h2>2. Secret Mode &amp; Encryption</h2>
-        <p>
-          When you mark a clip as "Secret," it gets encrypted using AES-256
-          before being written to disk. The encryption key is managed by your
-          operating system's credential store — Windows Credential Manager on
-          Windows, or the Secret Service API on Linux. I never see or have
-          access to your keys or encrypted content.
-        </p>
+        <div class="privacy-section">
+          <div class="section-header-block">
+            <div class="section-tag">02. Security</div>
+            <h2>Secret Mode & Encryption</h2>
+          </div>
+          <div class="section-content-block">
+            <p>When you mark a clip as "Secret," it is encrypted using AES-256 before being written to disk. The encryption key is managed by your operating system's native credential store (Windows Credential Manager or Linux Secret Service API). We never have access to your keys or content.</p>
+          </div>
+        </div>
 
-        <h2>3. What the Website Collects</h2>
-        <p>
-          This website is hosted on GitHub Pages. I don't run any analytics,
-          tracking scripts, or cookies. GitHub may log standard server-side data
-          (IP addresses, request timestamps) as part of their hosting
-          infrastructure — that's handled by GitHub's own
-          <a
-            href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
-            style="color: var(--accent); text-decoration: underline"
-            >privacy policy</a
-          >.
-        </p>
+        <div class="privacy-section">
+          <div class="section-header-block">
+            <div class="section-tag">03. Web Infrastructure</div>
+            <h2>What the Website Collects</h2>
+          </div>
+          <div class="section-content-block">
+            <p>This website is hosted on GitHub Pages. We don't run any analytics or tracking scripts. GitHub may log standard server-side data (IP addresses, request timestamps) as part of their hosting infrastructure, which is governed by GitHub's privacy policy.</p>
+          </div>
+        </div>
 
-        <h2>4. Third-Party Data Sharing</h2>
-        <p>
-          There is none. I don't share, sell, or transfer your data to anyone.
-          ClipinVault doesn't integrate with any third-party services, ad
-          networks, or analytics platforms.
-        </p>
+        <div class="privacy-section">
+          <div class="section-header-block">
+            <div class="section-tag">04. Third-Parties</div>
+            <h2>Data Sharing</h2>
+          </div>
+          <div class="section-content-block">
+            <p>There is zero third-party data sharing. We don't share, sell, or transfer your data to anyone. ClipinVault doesn't integrate with any third-party services, ad networks, or analytics platforms.</p>
+          </div>
+        </div>
 
-        <h2>5. External Links</h2>
-        <p>
-          If you click on links within the app or this website that lead to
-          external sites, those sites have their own privacy policies. I have no
-          control over their content or data practices.
-        </p>
+        <div class="privacy-section">
+          <div class="section-header-block">
+            <div class="section-tag">05. Policy Updates</div>
+            <h2>Changes to This Policy</h2>
+          </div>
+          <div class="section-content-block">
+            <p>If we update this policy, we'll post the changes here with a new date. The core principle remains unchanged: your data stays yours, and it stays on your device.</p>
+          </div>
+        </div>
 
-        <h2>6. Changes to This Policy</h2>
-        <p>
-          If I update this policy, I'll post the changes here with a new date.
-          There won't be any surprises — the core principle (your data stays
-          yours) isn't going to change.
-        </p>
-
-        <h2>7. Contact</h2>
-        <p>
-          If you have questions about privacy or data handling, you can reach me
-          through
-          <a
-            href="https://github.com/nhyadav"
-            style="color: var(--accent); text-decoration: underline"
-            >GitHub</a
-          >
-          or open an issue on the
-          <a
-            href="https://github.com/nhyadav/ClipinVault/issues"
-            style="color: var(--accent); text-decoration: underline"
-            >repository</a
-          >.
-        </p>
+        <div class="privacy-section">
+          <div class="section-header-block">
+            <div class="section-tag">06. Contact</div>
+            <h2>Questions?</h2>
+          </div>
+          <div class="section-content-block">
+            <p>If you have questions about privacy or data handling, you can reach me through GitHub or open an issue on the repository.</p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -188,14 +180,6 @@
             <span class="logo-clipin">Clipin</span
             ><span class="logo-vault">Vault</span>
           </span>
-        </div>
-        <div class="footer-links">
-          <a href="../#features">Features</a>
-          <a href="../#requirements">Requirements</a>
-          <a href="../#download">Download</a>
-          <a href="../about/">About</a>
-          <a href="../changelog/">Changelog</a>
-          <a href="../privacy/">Privacy</a>
         </div>
         <p class="footer-copy">
           &copy; 2026 ClipinVault. All rights reserved. Designed and developed

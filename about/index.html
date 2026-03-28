@@ -47,24 +47,50 @@
       </nav>
     </header>
 
-    <main>
-      <section class="subpage-hero">
+    <main class="about-page">
+      <section class="about-hero anim-fade">
         <div class="hero-badge">Who Made This</div>
         <h1>About <span class="gradient-text">ClipinVault</span></h1>
-        <p class="hero-sub">A clipboard manager I built because I kept losing things I copied.</p>
+        <p class="hero-sub">A clipboard manager built from daily frustration with lost copies.</p>
+      </section>
+
+      <section class="about-grid container">
+        <div class="about-story anim-fade">
+          <div class="section-tag">The Story</div>
           <h2>Why I Built This</h2>
           <p>I'm Narayan Yadav, a developer based in India. I built ClipinVault because I got tired of losing links, code snippets, and terminal outputs I'd copied just minutes earlier. Every existing clipboard tool I tried either needed a cloud subscription, looked terrible, or quietly shipped my data somewhere I didn't agree to.</p>
           <p>So I wrote my own. ClipinVault runs entirely on your machine — no accounts, no servers, no tracking. It uses SQLite for storage and AES-256 for encryption when you need it. I use it every day myself, and I keep improving it based on what I actually need.</p>
+        </div>
 
-          <h2>Current Status</h2>
-          <p>ClipinVault is in active development. The latest version is <strong>v1.3.3</strong>, available for Windows 10+ and Ubuntu 22.04+. I work on it regularly — fixing bugs, improving performance, and adding features that make sense. macOS support is on the roadmap.</p>
+        <div class="about-side-info anim-fade">
+          <div class="about-status">
+            <div class="section-tag">Current Status</div>
+            <div class="status-item">
+              <span class="status-label">Version</span>
+              <span class="status-value">v1.3.1</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Availability</span>
+              <span class="status-value">Windows 10+, Ubuntu 22.04+</span>
+            </div>
+            <p class="status-note">Active development. macOS support on the roadmap.</p>
+          </div>
 
-          <h2>Get In Touch</h2>
-          <p>Found a bug? Have a feature idea? Want to say hi?</p>
-          <ul>
-            <li><strong>GitHub:</strong> <a href="https://github.com/nhyadav" style="color:var(--accent); text-decoration:underline;">github.com/nhyadav</a></li>
-            <li><strong>Report Issues:</strong> Open an issue on the <a href="https://github.com/nhyadav/ClipinVault/issues" style="color:var(--accent); text-decoration:underline;">GitHub repository</a></li>
-          </ul>
+          <div class="about-contact">
+            <div class="section-tag">Get In Touch</div>
+            <p>Found a bug? Have a feature idea? Want to say hi?</p>
+            <div class="contact-links">
+              <a href="https://github.com/nhyadav" class="contact-link">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://github.com/nhyadav/ClipinVault/issues" class="contact-link">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <span>Report Issue</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -75,14 +101,6 @@
           <span class="logo-text" style="font-size: 1.1rem">
             <span class="logo-clipin">Clipin</span><span class="logo-vault">Vault</span>
           </span>
-        </div>
-        <div class="footer-links">
-          <a href="../#features">Features</a>
-          <a href="../#requirements">Requirements</a>
-          <a href="../#download">Download</a>
-          <a href="../about/">About</a>
-          <a href="../changelog/">Changelog</a>
-          <a href="../privacy/">Privacy</a>
         </div>
         <p class="footer-copy">
           &copy; 2026 ClipinVault. All rights reserved. Designed and developed by
