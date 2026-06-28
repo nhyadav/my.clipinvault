@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation-ClipinVault</title>
+    <meta name="description" content="Complete user guide for ClipinVault. Learn clipboard capture, secrets mode, import/export, auto-clean, keyboard shortcuts, and more." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://clipinvault.com/docs/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clipinvault.com/docs/" />
+    <meta property="og:title" content="Documentation-ClipinVault" />
+    <meta property="og:description" content="Complete user guide for ClipinVault clipboard manager. Every feature explained in depth." />
+    <meta property="og:image" content="https://clipinvault.com/assets/og-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Documentation-ClipinVault" />
+    <meta name="twitter:description" content="Complete user guide for ClipinVault clipboard manager." />
+    <meta name="twitter:image" content="https://clipinvault.com/assets/og-preview.png" />
+    <link rel="icon" type="image/png" href="../assets/appicon.png?v=2" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a href="../" class="logo">
+          <img src="../assets/appicon.png?v=2" alt="ClipinVault Logo" class="logo-img" width="32" height="32" />
+          <span class="logo-text">
+            <span class="logo-clipin">Clipin</span><span class="logo-vault">Vault</span>
+          </span>
+        </a>
+        <div class="nav-right">
+          <div class="nav-links" id="navLinks">
+            <a href="../docs/" class="nav-active">Docs</a>
+            <a href="../#features">Features</a>
+            <a href="../#requirements">Requirements</a>
+            <a href="../#download">Download</a>
+            <a href="../about/">About</a>
+            <a href="../changelog/">Changelog</a>
+            <a href="../privacy/">Privacy</a>
+          </div>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+            <svg class="icon-sun" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
+            <svg class="icon-moon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="docs-page-hero">
+        <div class="hero-badge">User Guide</div>
+        <h1>Docu<span class="gradient-text">mentation</span></h1>
+        <p>Everything you need to use ClipinVault effectively - from first install to advanced workflows.</p>
+      </section>
+
+      <!-- Two-column docs layout -->
+      <div class="docs-wrapper">
+
+        <!-- Sidebar TOC -->
+        <aside class="docs-sidebar">
+          <button class="docs-toc-toggle" id="docsTocToggle" aria-expanded="false">
+            <span>Table of Contents</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ol class="docs-toc" id="docsToc">
+            <li class="toc-group">Getting Started</li>
+            <li><a href="#install">Installation</a></li>
+            <li><a href="#first-launch">First Launch</a></li>
+            <li class="toc-group">Core Features</li>
+            <li><a href="#capture">Clipboard Capture</a></li>
+            <li><a href="#content-types">Content Types</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#pinning">Pinning &amp; Titles</a></li>
+            <li><a href="#paste">Pasting Clips</a></li>
+            <li class="toc-group">Security</li>
+            <li><a href="#secrets">Secrets Mode</a></li>
+            <li><a href="#encryption">Encryption</a></li>
+            <li class="toc-group">Import &amp; Export</li>
+            <li><a href="#export">Exporting Clips</a></li>
+            <li><a href="#import">Importing Clips</a></li>
+            <li class="toc-group">Create &amp; Edit</li>
+            <li><a href="#create-clip">Create Clip</a></li>
+            <li><a href="#edit-clip">Edit Clip Content</a></li>
+            <li class="toc-group">Management</li>
+            <li><a href="#auto-clean">Auto-Clean</a></li>
+            <li><a href="#shortcuts">Keyboard Shortcuts</a></li>
+            <li class="toc-group">Help</li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#data-location">Data Location</a></li>
+          </ol>
+        </aside>
+
+        <!-- Main docs content -->
+        <div class="docs-content">
+
+          <!-- ── Getting Started ── -->
+          <section id="install" class="doc-section">
+            <h2>Installation</h2>
+            <p>ClipinVault is distributed as a native installer for Windows and a <code>.deb</code> package for Ubuntu/Debian. No runtime or admin rights are required on Windows.</p>
+
+            <h3>Windows</h3>
+            <ol class="step-list">
+              <li>Download <strong>ClipinVaultSetup.exe</strong> from the <a href="../#download" style="color:var(--accent)">Downloads</a> section.</li>
+              <li>Run the installer- Windows may show a SmartScreen prompt - click <em>More info → Run anyway</em>.</li>
+              <li>Choose whether to create a desktop shortcut and whether to start with Windows.</li>
+              <li>Click <em>Install</em>. ClipinVault launches automatically when finished.</li>
+            </ol>
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>WebView2 Runtime is required. It comes pre-installed on Windows 10 21H2+ and all Windows 11 versions. If missing, the installer will prompt you to download it from Microsoft.</div>
+            </div>
+
+            <h3>Ubuntu / Linux</h3>
+            <ol class="step-list">
+              <li>Download the <code>.deb</code> package from the <a href="../#download" style="color:var(--accent)">Downloads</a> section.</li>
+              <li>Install with: <code>sudo dpkg -i clipinvault_*.deb</code></li>
+              <li>If dependency errors appear, run: <code>sudo apt-get install -f</code></li>
+              <li>Launch from your application menu or run <code>clipinvault</code> in a terminal.</li>
+            </ol>
+
+            <h3>Upgrading</h3>
+            <p>Run the new installer over the existing installation — it will close the running app, replace the binary, and relaunch. Your database, settings, and all clips are never touched during an upgrade.</p>
+          </section>
+
+          <section id="first-launch" class="doc-section">
+            <h2>First Launch</h2>
+            <p>On first launch ClipinVault creates its data directory and starts monitoring the clipboard immediately. No sign-in, no account, no configuration required.</p>
+            <ol class="step-list">
+              <li>The app window opens. Copy anything — a URL, a code snippet, a password — and it appears in the list within a second.</li>
+              <li>Click any entry to see its full content in the detail pane on the right.</li>
+              <li>Click <strong>Use for Paste</strong> (or press <kbd class="kbd">Enter</kbd>) to put the clip back on your system clipboard so you can paste it anywhere.</li>
+              <li>Close the window. ClipinVault keeps running in the system tray — clips keep being captured.</li>
+            </ol>
+            <div class="callout callout-tip">
+              <span class="callout-icon">💡</span>
+              <div>Press <kbd class="kbd">Ctrl+Shift+Alt+V</kbd> from any application to bring the ClipinVault window back to the front.</div>
+            </div>
+          </section>
+
+          <!-- ── Core Features ── -->
+          <section id="capture" class="doc-section">
+            <h2>Clipboard Capture</h2>
+            <p>ClipinVault listens to the OS clipboard event in the background. Every time you copy something — with <kbd class="kbd">Ctrl+C</kbd>, right-click → Copy, or any application's copy action — the content is captured and stored locally.</p>
+
+            <h3>How capture works</h3>
+            <ul>
+              <li><strong>Debounce:</strong> rapid successive copies within 300 ms are merged to prevent duplicate entries from drag-resize or auto-copy applications.</li>
+              <li><strong>Deduplication:</strong> the SHA-256 hash of each entry is computed before saving. If an identical item already exists, the copy count on the existing entry is incremented — no duplicate is added.</li>
+              <li><strong>Size limit:</strong> entries up to <strong>5 MB</strong> are accepted. Anything larger is silently skipped to prevent performance issues with huge clipboard payloads.</li>
+              <li><strong>Minimum length:</strong> single-character or empty copies are ignored to reduce noise.</li>
+            </ol>
+
+            <h3>What gets captured</h3>
+            <ul>
+              <li>Plain text, rich text, code, JSON, SQL, URLs, terminal commands</li>
+              <li>Screenshots and copied images (stored encrypted, displayed as previews)</li>
+              <li>Any text content your applications place on the clipboard</li>
+            </ol>
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>ClipinVault does <strong>not</strong> capture clipboard content from other ClipinVault paste operations — re-pasting a clip does not create a duplicate entry.</div>
+            </div>
+          </section>
+
+          <section id="content-types" class="doc-section">
+            <h2>Content Types</h2>
+            <p>Every entry is automatically tagged with a content type the moment it is captured. The type controls how the entry is displayed, coloured, and filtered.</p>
+
+            <table class="docs-table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Badge</th>
+                  <th>Auto-detected when…</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>text</strong></td>
+                  <td><span class="type-badge badge-text">text</span></td>
+                  <td>Default fallback — plain prose, notes, anything not matched below.</td>
+                </tr>
+                <tr>
+                  <td><strong>code</strong></td>
+                  <td><span class="type-badge badge-code">code</span></td>
+                  <td>Contains keywords like <code>function</code>, <code>const</code>, <code>class</code>, <code>import</code>, <code>def</code>, indentation patterns, or bracket density suggests source code.</td>
+                </tr>
+                <tr>
+                  <td><strong>sql</strong></td>
+                  <td><span class="type-badge badge-sql">sql</span></td>
+                  <td>Starts with SQL keywords: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>CREATE</code>, <code>DROP</code>, etc.</td>
+                </tr>
+                <tr>
+                  <td><strong>json</strong></td>
+                  <td><span class="type-badge badge-json">json</span></td>
+                  <td>Content is valid JSON (object <code>{}</code> or array <code>[]</code>).</td>
+                </tr>
+                <tr>
+                  <td><strong>url</strong></td>
+                  <td><span class="type-badge badge-url">url</span></td>
+                  <td>Content begins with <code>http://</code> or <code>https://</code>.</td>
+                </tr>
+                <tr>
+                  <td><strong>cmd</strong></td>
+                  <td><span class="type-badge badge-cmd">cmd</span></td>
+                  <td>Starts with shell prefixes like <code>$</code>, <code>#</code>, <code>sudo</code>, <code>git</code>, <code>npm</code>, <code>docker</code>, <code>./</code>, etc.</td>
+                </tr>
+                <tr>
+                  <td><strong>mfa</strong></td>
+                  <td><span class="type-badge badge-mfa">mfa</span></td>
+                  <td>Numeric TOTP codes (<code>123456</code>) or alphanumeric one-time codes up to 12 characters (<code>JTKASF</code>, <code>MGA-TGP</code>). Must be uppercase letters and/or digits only — no lowercase.</td>
+                </tr>
+                <tr>
+                  <td><strong>secret</strong></td>
+                  <td><span class="type-badge badge-secret">secret</span></td>
+                  <td>Manually assigned by the user (never auto-detected). Content is masked and encrypted at rest.</td>
+                </tr>
+                <tr>
+                  <td><strong>image</strong></td>
+                  <td><span class="type-badge badge-image">image</span></td>
+                  <td>Clipboard contained image data (PNG bytes). Captured automatically when you copy a screenshot or image.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Changing the type manually</h3>
+            <p>Click on the type badge of any entry in the detail pane. A dropdown lets you switch between <code>text</code>, <code>code</code>, <code>sql</code>, <code>json</code>, <code>url</code>, <code>cmd</code>, and <code>secret</code>. Changing to <code>secret</code> will immediately encrypt the content.</p>
+          </section>
+
+          <section id="search" class="doc-section">
+            <h2>Search</h2>
+            <p>ClipinVault uses SQLite FTS5 (Full-Text Search version 5) — the same engine that powers many professional search applications. Results appear as you type with no perceptible delay even across thousands of entries.</p>
+
+            <h3>How to search</h3>
+            <ol class="step-list">
+              <li>Click the search bar at the top of the window (or press <kbd class="kbd">Ctrl+Shift+V</kbd> to focus it).</li>
+              <li>Type any word, phrase, or fragment. Results update in real time.</li>
+              <li>Use the type filter dropdown to narrow results to a specific content type (e.g. only <em>code</em> or only <em>url</em> entries).</li>
+            </ol>
+
+            <h3>Search tips</h3>
+            <ul>
+              <li>Search matches against both the entry content <em>and</em> the custom title you may have set.</li>
+              <li>Search is case-insensitive.</li>
+              <li><strong>Secret entries are excluded from search results</strong> — their content is encrypted and not indexed. You can still find them by switching the type filter to <em>secret</em>.</li>
+              <li>Clearing the search bar returns to the full list sorted by most-recent first.</li>
+            </ol>
+          </section>
+
+          <section id="pinning" class="doc-section">
+            <h2>Pinning &amp; Titles</h2>
+
+            <h3>Pinning entries</h3>
+            <p>Click the <strong>pin icon</strong> on any entry to mark it as pinned. Pinned entries:</p>
+            <ul>
+              <li>Always appear at the top of the list regardless of age.</li>
+              <li>Are <strong>never deleted</strong> by the Auto-Clean janitor, regardless of retention settings.</li>
+              <li>Survive application updates unchanged.</li>
+            </ol>
+            <p>Click the pin icon again to unpin. Unpinned entries return to the normal chronological list.</p>
+
+            <h3>Custom titles</h3>
+            <p>Every entry can have a user-defined title (max 80 characters). Click the title area of an entry in the detail pane and type a name — for example, <em>"Production DB password"</em> or <em>"Deploy script for staging"</em>. The title is searchable and appears as the primary label in the list view.</p>
+          </section>
+
+          <section id="paste" class="doc-section">
+            <h2>Pasting Clips</h2>
+            <p>Finding a clip is only half the job — getting it back into your workflow is the other half. ClipinVault offers several ways to paste.</p>
+
+            <h3>Click to paste</h3>
+            <ol class="step-list">
+              <li>Select an entry in the list.</li>
+              <li>Click <strong>Use for Paste</strong> in the detail pane.</li>
+              <li>Switch to your target application and press <kbd class="kbd">Ctrl+V</kbd> as normal.</li>
+            </ol>
+
+            <h3>Keyboard shortcuts</h3>
+            <table class="shortcuts-table">
+              <thead>
+                <tr>
+                  <th>Shortcut</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd class="kbd">Enter</kbd> (list focused)</td>
+                  <td>Use the selected entry for paste</td>
+                </tr>
+                <tr>
+                  <td><kbd class="kbd">Ctrl+Shift+1</kbd></td>
+                  <td>Push the most-recent clip to the clipboard immediately</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>System tray quick-paste</h3>
+            <p>The system tray icon shows the 5 most-recent clips in its context menu. Click any of them to copy the clip directly to your clipboard without opening the main window.</p>
+          </section>
+
+          <!-- ── Security ── -->
+          <section id="secrets" class="doc-section">
+            <h2>Secrets Mode</h2>
+            <p>Secrets Mode lets you store sensitive data — passwords, API keys, tokens — inside your clipboard history without exposing them in plain text.</p>
+
+            <h3>Marking an entry as secret</h3>
+            <ol class="step-list">
+              <li>Find the entry in your list (it may have been auto-captured as <code>text</code>).</li>
+              <li>Open it in the detail pane.</li>
+              <li>Click the type badge and choose <strong>secret</strong>.</li>
+              <li>The preview immediately changes to <code>••••••••</code> and the content is encrypted on disk.</li>
+            </ol>
+
+            <h3>Using a secret</h3>
+            <p>Click <strong>Use for Paste</strong> on a secret entry. ClipinVault decrypts it in memory, copies the plain text to your clipboard, and you can paste normally. The decrypted content is never logged.</p>
+
+            <div class="callout callout-warn">
+              <span class="callout-icon">⚠️</span>
+              <div><b>Important:</b> Secret entries are excluded from export by default. When you do export secrets, they appear as plain text in the <code>.secrets.clipbundle</code> file. Treat that file like a password — delete it after importing on the destination device.</div>
+            </div>
+          </section>
+
+          <section id="encryption" class="doc-section">
+            <h2>Encryption</h2>
+            <p>ClipinVault uses AES-256-GCM envelope encryption for all secret entries and all image files. This is the same algorithm used in TLS, Signal, and modern storage encryption.</p>
+
+            <h3>How it works</h3>
+            <ul>
+              <li><strong>Master key:</strong> a 32-byte random key is generated on first launch and stored in your OS credential store (Windows Credential Manager on Windows, Secret Service API on Linux, Keychain on macOS). It never touches disk in plain form.</li>
+              <li><strong>Per-entry key:</strong> each secret entry gets its own unique random data key. The data key is encrypted by the master key (envelope encryption) and stored alongside the ciphertext in the database.</li>
+              <li><strong>Nonce:</strong> a unique 12-byte nonce is generated for every encryption operation, ensuring that the same plaintext encrypts to different ciphertext each time.</li>
+            </ol>
+
+            <h3>What this means for you</h3>
+            <ul>
+              <li>If someone copies your database file (<code>ClipinVault.db</code>), they cannot read your secrets without also having your OS master key.</li>
+              <li>Your secrets are safe even if the app is force-closed mid-write (WAL journal mode ensures atomicity).</li>
+              <li>Uninstalling the app and re-installing on the same machine preserves the master key — your encrypted secrets remain readable.</li>
+            </ol>
+
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>If your OS keyring becomes unavailable (locked, corrupted, or moved to a new machine), secret entries will appear locked. Regular text, code, and image entries are unaffected.</div>
+            </div>
+          </section>
+
+          <!-- ── Import & Export ── -->
+          <section id="export" class="doc-section">
+            <h2>Exporting Clips</h2>
+            <p>The Export feature lets you package your clipboard history into a portable <code>.clipbundle</code> file that you can move to another machine or store as a backup.</p>
+
+            <h3>How to export</h3>
+            <ol class="step-list">
+              <li>In the ClipinVault window, click <strong>File → Export</strong> in the menu bar.</li>
+              <li>The Export dialog shows checkboxes for each content type. Select the types you want to include.</li>
+              <li>Optionally enable <strong>Export secrets (separate file)</strong> to include your secret entries.</li>
+              <li>Click <strong>Export</strong> and choose where to save the file.</li>
+            </ol>
+
+            <h3>What gets exported</h3>
+            <table class="docs-table">
+              <thead>
+                <tr><th>Content</th><th>Exported?</th><th>Notes</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="type-badge badge-text">text</span> <span class="type-badge badge-code">code</span> <span class="type-badge badge-sql">sql</span> <span class="type-badge badge-json">json</span> <span class="type-badge badge-url">url</span> <span class="type-badge badge-cmd">cmd</span></td>
+                  <td>✅ Yes (if selected)</td>
+                  <td>Pin status, titles, and usage counts are preserved.</td>
+                </tr>
+                <tr>
+                  <td><span class="type-badge badge-secret">secret</span></td>
+                  <td>✅ Separate file</td>
+                  <td>Written as plain text to <code>.secrets.clipbundle</code>. See warning below.</td>
+                </tr>
+                <tr>
+                  <td><span class="type-badge badge-image">image</span> <span class="type-badge badge-mfa">mfa</span></td>
+                  <td>❌ Never</td>
+                  <td>Images are device-specific. MFA codes expire within 30 seconds.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Bundle file format</h3>
+            <p>A <code>.clipbundle</code> file is plain JSON. It can be opened with any text editor. The format is stable across ClipinVault versions.</p>
+
+            <div class="callout callout-warn">
+              <span class="callout-icon">⚠️</span>
+              <div>
+                <b>Secrets export creates a plaintext file.</b> The <code>.secrets.clipbundle</code> file contains your secret entries in plain text — no encryption. Transfer it over a secure channel (encrypted drive, SSH, secure messaging) and delete it immediately after import on the destination device.
+              </div>
+            </div>
+          </section>
+
+          <section id="import" class="doc-section">
+            <h2>Importing Clips</h2>
+            <p>Import a <code>.clipbundle</code> or <code>.secrets.clipbundle</code> file to merge clips from another machine into your current vault.</p>
+
+            <h3>How to import</h3>
+            <ol class="step-list">
+              <li>Click <strong>File → Import</strong> in the menu bar.</li>
+              <li>Click <strong>Select .clipbundle file</strong> and pick the bundle you exported.</li>
+              <li>A preview shows the number of entries found and their types.</li>
+              <li>Click <strong>Import</strong> to confirm. The merge begins immediately.</li>
+            </ol>
+
+            <h3>What happens during import</h3>
+            <ul>
+              <li><strong>Deduplication:</strong> entries whose content hash already exists in your vault are skipped. You will never end up with duplicates.</li>
+              <li><strong>Secrets re-encryption:</strong> secret entries from a <code>.secrets.clipbundle</code> are encrypted with <em>this device's</em> master key the moment they are imported. They are never stored as plain text.</li>
+              <li><strong>Metadata preserved:</strong> pin status, custom titles, and usage counts from the bundle are imported alongside the content.</li>
+              <li><strong>Images and MFA skipped:</strong> even if a bundle somehow contains image or mfa entries, they are silently ignored as a safety guard.</li>
+            </ol>
+
+            <div class="callout callout-tip">
+              <span class="callout-icon">💡</span>
+              <div>Import is non-destructive. Your existing clips are never modified or removed during an import — only new, unique entries are added.</div>
+            </div>
+          </section>
+
+          <!-- ── Create & Edit ── -->
+          <section id="create-clip" class="doc-section">
+            <h2>Create Clip</h2>
+            <p>You don't need to copy something to an external app and then come back to ClipinVault — you can create a clip directly inside the app at any time.</p>
+
+            <h3>How to create a clip manually</h3>
+            <ol class="step-list">
+              <li>Click the <strong>New Clip</strong> button at the top of the left sidebar.</li>
+              <li>The clip list and detail panel are replaced by a full-panel editor. Only the sidebar remains visible.</li>
+              <li>Optionally enter a <strong>Title</strong> (up to 80 characters) at the top of the editor.</li>
+              <li>Type or paste your content in the editor area. Line numbers are shown live; <kbd class="kbd">Tab</kbd> inserts 2 spaces and <kbd class="kbd">Enter</kbd> auto-indents to match the current line.</li>
+              <li>Use the <strong>type selector</strong> at the bottom left to choose a content type (<code>text</code>, <code>code</code>, <code>sql</code>, <code>json</code>, <code>url</code>, <code>cmd</code>, <code>mfa</code>, or <code>secret</code>).</li>
+              <li>Click <strong>Save Clip</strong>. The new clip appears in the list and is selected automatically.</li>
+            </ol>
+
+            <div class="callout callout-tip">
+              <span class="callout-icon">💡</span>
+              <div>Press <kbd class="kbd">Esc</kbd> at any time to cancel and return to the normal list view without saving.</div>
+            </div>
+
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>Manually-created clips are <strong>not</strong> deduplicated against existing entries — if you create the same content twice it will be stored as two separate clips. This is intentional so you can keep distinct copies with different titles or types.</div>
+            </div>
+
+            <div class="callout callout-warn">
+              <span class="callout-icon">⚠️</span>
+              <div>MFA clips expire automatically after <strong>60 seconds</strong> regardless of whether they were captured or created manually. Do not use the MFA type for codes you want to keep.</div>
+            </div>
+          </section>
+
+          <section id="edit-clip" class="doc-section">
+            <h2>Edit Clip Content</h2>
+            <p>Captured clips sometimes contain extra whitespace, truncated lines, or content you want to refine. The Edit Content feature lets you update the text of any clip in-place.</p>
+
+            <h3>How to edit a clip</h3>
+            <ol class="step-list">
+              <li>Select the clip in the list to open it in the detail pane.</li>
+              <li>Click <strong>Edit Content</strong> at the bottom of the detail pane. The button is only shown for editable types.</li>
+              <li>The detail area switches to an edit panel with the current content pre-loaded.</li>
+              <li>Make your changes in the text area. You can also change the <strong>content type</strong> using the type selector.</li>
+              <li>Click <strong>Save</strong> to commit. The list preview and the full-text search index are both updated immediately.</li>
+              <li>Click <strong>Cancel</strong> or press <kbd class="kbd">Esc</kbd> to discard your changes.</li>
+            </ol>
+
+            <h3>Which clips can be edited</h3>
+            <table class="docs-table">
+              <thead>
+                <tr><th>Type</th><th>Editable?</th><th>Reason</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="type-badge badge-text">text</span> <span class="type-badge badge-code">code</span> <span class="type-badge badge-sql">sql</span> <span class="type-badge badge-json">json</span> <span class="type-badge badge-url">url</span> <span class="type-badge badge-cmd">cmd</span> <span class="type-badge badge-mfa">mfa</span></td><td>✅ Yes</td><td>Plain-text content can be freely modified.</td></tr>
+                <tr><td><span class="type-badge badge-secret">secret</span></td><td>❌ No</td><td>Content is encrypted. Editing would require decrypting and re-encrypting, which is a security-sensitive operation handled separately by changing the type.</td></tr>
+                <tr><td><span class="type-badge badge-image">image</span></td><td>❌ No</td><td>Image clips are binary files stored on disk — they cannot be text-edited.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>Editing content recomputes the SHA-256 hash stored in the database and updates the full-text search index. Searches for your updated keywords will work immediately.</div>
+            </div>
+          </section>
+
+          <!-- ── Management ── -->
+          <section id="auto-clean" class="doc-section">
+            <h2>Auto-Clean</h2>
+            <p>The Auto-Clean janitor runs in the background every hour and removes old clips according to your retention policy. It is <strong>disabled by default</strong> — nothing is ever auto-deleted until you enable it.</p>
+
+            <h3>Configuring Auto-Clean</h3>
+            <ol class="step-list">
+              <li>Open <strong>Settings</strong> (gear icon in the top bar).</li>
+              <li>Enable the <strong>Auto-Clean</strong> toggle.</li>
+              <li>Set <strong>Max age (days)</strong>: clips older than this are deleted. Set to 0 to disable age-based cleanup.</li>
+              <li>Optionally set <strong>Min usage count</strong>: clips with fewer usages than this threshold are also deleted. Set to 0 to disable usage-based cleanup.</li>
+            </ol>
+
+            <h3>What is never auto-deleted</h3>
+            <ul>
+              <li><strong>Pinned entries</strong> — the pin flag is an explicit "never delete" signal. Pinned entries survive Auto-Clean regardless of age or usage count.</li>
+              <li>Entries with a hard <code>expires_at</code> date in the future (reserved for future features).</li>
+            </ol>
+
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>The janitor only runs while the app is open. If you close ClipinVault for a week and reopen it, the janitor runs once when the app starts and catches up on all overdue deletions.</div>
+            </div>
+          </section>
+
+          <section id="shortcuts" class="doc-section">
+            <h2>Keyboard Shortcuts</h2>
+            <table class="shortcuts-table">
+              <thead>
+                <tr>
+                  <th>Shortcut</th>
+                  <th>Action</th>
+                  <th>Works from</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd class="kbd">Ctrl+Shift+Alt+V</kbd></td>
+                  <td>Show / hide the ClipinVault window</td>
+                  <td>Anywhere (global hotkey)</td>
+                </tr>
+                <tr>
+                  <td><kbd class="kbd">Ctrl+Shift+1</kbd></td>
+                  <td>Push the most-recent clip to the clipboard for immediate pasting</td>
+                  <td>Anywhere (global hotkey)</td>
+                </tr>
+                <tr>
+                  <td><kbd class="kbd">Ctrl+Shift+V</kbd></td>
+                  <td>Focus the clip list / search bar</td>
+                  <td>Inside the app window</td>
+                </tr>
+                <tr>
+                  <td><kbd class="kbd">Enter</kbd></td>
+                  <td>Use selected clip for paste</td>
+                  <td>Clip list focused</td>
+                </tr>
+                <tr>
+                  <td><kbd class="kbd">↑ / ↓</kbd></td>
+                  <td>Navigate the clip list</td>
+                  <td>Clip list focused</td>
+                </tr>
+                <tr>
+                  <td><kbd class="kbd">Esc</kbd></td>
+                  <td>Clear search / deselect / cancel New Clip or Edit</td>
+                  <td>Inside the app window</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- ── Help ── -->
+          <section id="troubleshooting" class="doc-section">
+            <h2>Troubleshooting</h2>
+
+            <h3>My copies aren't appearing in the list</h3>
+            <ul>
+              <li>Check that ClipinVault is still running — look for the icon in your system tray.</li>
+              <li>Content shorter than 2 characters is ignored automatically.</li>
+              <li>Content larger than 5 MB is skipped silently.</li>
+              <li>Try clicking <strong>Refresh</strong> in the toolbar to force a reload from the database.</li>
+              <li>On Linux, ensure the required clipboard daemon (<code>xclip</code> or <code>xsel</code>) is installed.</li>
+            </ol>
+
+            <h3>Import / Export menu items are greyed out or don't work</h3>
+            <div class="callout callout-warn">
+              <span class="callout-icon">⚠️</span>
+              <div>Import and Export require the <strong>native Wails app window</strong>. If you open <code>http://localhost:5173</code> in a browser (dev mode), the file-picker API is not available. Always use the installed desktop app for these features.</div>
+            </div>
+
+            <h3>The app says secrets are "locked"</h3>
+            <p>This means the OS keyring is unavailable — your master key cannot be retrieved. Common causes:</p>
+            <ul>
+              <li><strong>Windows:</strong> your Windows account is locked or using a temporary profile. Sign in normally and relaunch ClipinVault.</li>
+              <li><strong>Linux:</strong> the GNOME Keyring or KWallet service is not running. Start it with <code>gnome-keyring-daemon --start</code> and relaunch.</li>
+            </ol>
+            <p>Text, code, URL, and image entries remain fully usable — only secret entries are affected.</p>
+
+            <h3>My data disappeared after an update</h3>
+            <p>This should <strong>never</strong> happen. The installer only replaces the application binary in the install directory — it never touches your data directory.</p>
+            <p>If you lost data, the most likely cause was a manual uninstall that deleted <code>%LOCALAPPDATA%\ClipinVault</code> before reinstalling. Use <strong>File → Import</strong> to restore from a <code>.clipbundle</code> export if you have one.</p>
+
+            <h3>Large content is not being captured</h3>
+            <p>ClipinVault captures up to <strong>5 MB</strong> per entry. Content exceeding this is silently skipped. If you regularly copy very large payloads (e.g. multi-MB log files), consider splitting or compressing them before copying.</p>
+          </section>
+
+          <section id="data-location" class="doc-section">
+            <h2>Data Location</h2>
+            <p>All ClipinVault data is stored locally on your machine. There is no cloud sync or remote storage of any kind.</p>
+
+            <h3>Windows</h3>
+            <span class="data-path-os">Data directory</span>
+            <div class="data-path">%LOCALAPPDATA%\ClipinVault\</div>
+
+            <h3>Linux</h3>
+            <span class="data-path-os">Data directory</span>
+            <div class="data-path">~/.local/share/ClipinVault/</div>
+
+            <h3>Files inside the data directory</h3>
+            <table class="docs-table">
+              <thead>
+                <tr><th>File / Folder</th><th>Contents</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>ClipinVault.db</code></td><td>Your entire clipboard history (SQLite database).</td></tr>
+                <tr><td><code>settings.json</code></td><td>App preferences (auto-clean settings, etc.).</td></tr>
+                <tr><td><code>images/</code></td><td>Encrypted image files for image-type clips.</td></tr>
+                <tr><td><code>logs/</code></td><td>Daily log files (<code>ClipinVault-YYYY-MM-DD.log</code>). Safe to delete if disk space is tight.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-warn">
+              <span class="callout-icon">⚠️</span>
+              <div>Never manually delete or move <code>ClipinVault.db</code> while the app is running. The app uses WAL mode — deleting the file mid-session can corrupt the journal. Close the app first, then manage files.</div>
+            </div>
+
+            <h3>Backing up your data</h3>
+            <p>The safest backup method is <strong>File → Export</strong> inside the app — it produces a clean, portable bundle. For a full backup including images and settings, copy the entire data directory while ClipinVault is closed.</p>
+          </section>
+
+        </div><!-- /.docs-content -->
+      </div><!-- /.docs-wrapper -->
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="../assets/appicon.png?v=2" alt="ClipinVault" width="24" height="24" />
+          <span class="logo-text" style="font-size: 1.1rem">
+            <span class="logo-clipin">Clipin</span><span class="logo-vault">Vault</span>
+          </span>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 ClipinVault. All rights reserved. Designed and developed by
+          <a href="https://github.com/nhyadav">Narayan Yadav</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Theme
+      const toggle = document.getElementById("themeToggle");
+      const html = document.documentElement;
+      const stored = localStorage.getItem("cv-theme");
+      if (stored) html.setAttribute("data-theme", stored);
+      else if (window.matchMedia("(prefers-color-scheme: light)").matches) html.setAttribute("data-theme", "light");
+      toggle.addEventListener("click", () => {
+        const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("cv-theme", next);
+      });
+
+      // Hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("active");
+      });
+      navLinks.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+        })
+      );
+
+      // Scroll animations
+      const fadeObserver = new IntersectionObserver(
+        (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); fadeObserver.unobserve(e.target); } }),
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll(".anim-fade").forEach((el) => fadeObserver.observe(el));
+
+      // Mobile TOC toggle
+      const tocToggle = document.getElementById("docsTocToggle");
+      const docsToc = document.getElementById("docsToc");
+      if (tocToggle) {
+        tocToggle.addEventListener("click", () => {
+          const isOpen = docsToc.classList.toggle("toc-open");
+          tocToggle.setAttribute("aria-expanded", isOpen);
+        });
+      }
+
+      // TOC active link tracking via IntersectionObserver
+      const sections = document.querySelectorAll(".doc-section");
+      const tocLinks = document.querySelectorAll(".docs-toc a");
+
+      const tocObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((link) => {
+              link.classList.toggle("toc-active", link.getAttribute("href") === "#" + id);
+            });
+          }
+        });
+      }, {
+        rootMargin: "-10% 0px -80% 0px",
+        threshold: 0
+      });
+
+      sections.forEach((sec) => tocObserver.observe(sec));
+    </script>
+  </body>
+</html>
