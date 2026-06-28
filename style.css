@@ -1307,7 +1307,6 @@ footer {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
   .section-header-block,
   .changelog-meta {
     position: static;
