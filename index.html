@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ClipinVault Secure & Modern Clipboard Manager for Windows & Linux
+    </title>
+    <meta
+      name="description"
+      content="ClipinVault is a secure clipboard manager that automatically captures text, images, and rich content. Available for Windows and Ubuntu Linux. Privacy-first — all data stays on your machine."
+    />
+    <meta
+      name="keywords"
+      content="clipboard manager, clipboard history, copy paste manager, Windows clipboard, Linux clipboard, ClipinVault"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Narayan Yadav" />
+    <link rel="canonical" href="https://clipinvault.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clipinvault.com/" />
+    <meta
+      property="og:title"
+      content="ClipinVault-Secure & Modern Clipboard Manager"
+    />
+    <meta
+      property="og:description"
+      content="A privacy-first clipboard manager that captures everything you copy. Smart search, image support, and lightweight design. Download for Windows or Ubuntu."
+    />
+    <meta
+      property="og:image"
+      content="https://clipinvault.com/assets/og-preview.png"
+    />
+    <meta property="og:site_name" content="ClipinVault" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ClipinVault-Secure & Modern Clipboard Manager"
+    />
+    <meta
+      name="twitter:description"
+      content="A privacy-first clipboard manager that captures everything you copy. Download for Windows or Ubuntu."
+    />
+    <meta
+      name="twitter:image"
+      content="https://clipinvault.com/assets/og-preview.png"
+    />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ClipinVault",
+        "operatingSystem": ["Windows 10+", "Ubuntu 22.04+"],
+        "applicationCategory": "UtilitiesApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "softwareVersion": "1.3.3",
+        "description": "A secure clipboard manager that automatically captures text, images, and rich content.",
+        "url": "https://clipinvault.com",
+        "author": {
+          "@type": "Person",
+          "name": "Narayan Yadav",
+          "url": "https://github.com/nhyadav"
+        }
+      }
+    </script>
+    <link rel="icon" type="image/png" href="assets/appicon.png?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a href="./" class="logo">
+          <img
+            src="assets/appicon.png?v=2"
+            alt="ClipinVault Logo"
+            class="logo-img"
+            width="32"
+            height="32"
+          />
+          <span class="logo-text">
+            <span class="logo-clipin">Clipin</span
+            ><span class="logo-vault">Vault</span>
+          </span>
+        </a>
+        <div class="nav-right">
+          <div class="nav-links" id="navLinks">
+            <a href="docs/">Docs</a>
+            <a href="#features">Features</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#download">Download</a>
+            <a href="about/">About</a>
+            <a href="changelog/">Changelog</a>
+            <a href="privacy/">Privacy</a>
+          </div>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark/light theme"
+          >
+            <svg
+              class="icon-sun"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="hero-badge">Clipboard Management • Reimagined</div>
+        <h1>
+          The clipboard manager<br /><span class="gradient-text"
+            >for professionals.</span
+          >
+        </h1>
+        <p class="hero-sub">
+          Stop losing text and images you copied earlier. ClipinVault runs
+          securely in the background, keeping a searchable history of your
+          clipboard directly on your local machine.
+        </p>
+        <div class="cta-group">
+          <a
+            href="https://github.com/nhyadav/clipinvault/releases/download/v1.3.3/ClipinVaultSetup.exe"
+            class="btn btn-primary"
+            id="dl-win-hero"
+          >
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" /><rect x="13" y="2" width="9" height="9" /><rect x="2" y="13" width="9" height="9" /><rect x="13" y="13" width="9" height="9" /></svg>
+            Download for Windows
+          </a>
+          <a
+            href="https://github.com/nhyadav/clipinvault/releases/download/v1.3.3/clipinvault_1.3.3_amd64.deb"
+            class="btn btn-outline"
+            download
+            id="dl-ubuntu-hero"
+          >
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="4.5" r="1.8" fill="currentColor" /><circle cx="5.5" cy="16" r="1.8" fill="currentColor" /><circle cx="18.5" cy="16" r="1.8" fill="currentColor" /></svg>
+            Download for Ubuntu
+          </a>
+          <a href="docs/" class="btn btn-outline">Read the Docs →</a>
+        </div>
+        <p class="hero-note">v1.3.3 &nbsp;&middot;&nbsp; Windows ~12 MB &nbsp;&middot;&nbsp; Ubuntu ~18 MB</p>
+      </section>
+
+      <!-- Stats Bar -->
+      <section class="stats-bar-section">
+        <div class="container stats-bar">
+          <div class="stat">
+            <span class="stat-val">5 MB</span>
+            <p>max clip size</p>
+          </div>
+          <div class="stat">
+            <span class="stat-val">AES-256</span>
+            <p>secret encryption</p>
+          </div>
+          <div class="stat">
+            <span class="stat-val">Zero</span>
+            <p>cloud dependency</p>
+          </div>
+          <div class="stat">
+            <span class="stat-val">FTS5</span>
+            <p>instant search</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Bento Box -->
+      <section class="features bento-section" id="features">
+        <div class="section-header anim-fade">
+          <h2>
+            Powerful Features,<br /><span class="gradient-text"
+              >Zero Complexity</span
+            >
+          </h2>
+          <p>
+            The tools you need for speed, privacy, and organization seamlessly
+            integrated.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Large Feature 1: Smart Auto-Clean -->
+          <div class="bento-card card-large anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-green">Storage Management</span>
+              <h3>Smart Auto-Clean Policies</h3>
+              <p>
+                Don't let your clipboard eat your disk space. Set retention
+                policies based on <strong>age</strong> and
+                <strong>usage frequency</strong>. Pinned and Secret items are
+                permanently protected from the background Janitor cycle.
+              </p>
+            </div>
+          </div>
+
+          <!-- Large Feature 2: System Tray -->
+          <div class="bento-card card-large anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-blue">Always On</span>
+              <h3>Silent System Tray Capture</h3>
+              <p>
+                Closing the window doesn't stop the flow. ClipinVault runs
+                silently in your background, perfectly capturing rich text and
+                images the moment you hit Copy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Wide Feature: AES Encryption -->
+          <div class="bento-card card-wide anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-purple">Security First</span>
+              <h3>AES-256 Secret Mode</h3>
+              <p>
+                Mark passwords or API keys as <strong>Secret</strong>. They are
+                encrypted at rest using OS-level Keyring and a Master Key. They
+                never appear in search indexes or previews.
+              </p>
+            </div>
+          </div>
+
+          <!-- Small Feature: FTS5 Search -->
+          <div class="bento-card card-small anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-outline">Speed</span>
+              <h3>FTS5 Instant Search</h3>
+              <p>
+                Find links and snippets from weeks ago instantly with SQLite
+                Full-Text Search.
+              </p>
+            </div>
+          </div>
+
+          <!-- Small Feature: Formatting -->
+          <div class="bento-card card-small anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-outline">Intelligence</span>
+              <h3>Type Detection</h3>
+              <p>
+                Automatically tags Code, SQL, Images, URLs, and JSON with syntax
+                highlighting.
+              </p>
+            </div>
+          </div>
+
+          <!-- Import & Export -->
+          <div class="bento-card card-small anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-outline">Portability</span>
+              <h3>Import &amp; Export</h3>
+              <p>
+                Move your vault between devices. Export to a portable
+                <code>.clipbundle</code> file. Secrets travel in a separate
+                file, re-encrypted on arrival.
+              </p>
+            </div>
+          </div>
+
+          <!-- Manual Clip Creation -->
+          <div class="bento-card card-small anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-green">New in v1.3.3</span>
+              <h3>Create Clips Manually</h3>
+              <p>
+                Type or paste content directly into ClipinVault without copying
+                from another app. Choose a type, add a title, and save — no
+                clipboard event needed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Edit Clip Content -->
+          <div class="bento-card card-small anim-fade">
+            <div class="bento-content">
+              <span class="bento-pill pill-green">New in v1.3.3</span>
+              <h3>Edit Clip Content</h3>
+              <p>
+                Fix typos, sanitise captured text, or rewrite entries in-place.
+                Works for all types except Secret and Image — content and type
+                can both be updated.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Requirements -->
+      <section class="requirements" id="requirements">
+        <div class="section-header anim-fade">
+          <h2>Runtime <span class="gradient-text">Requirements</span></h2>
+          <p>
+            Make sure your system meets these prerequisites before installing.
+          </p>
+        </div>
+        <div class="req-grid">
+          <div class="req-card anim-fade">
+            <div class="req-icon">
+              <!-- <svg
+                width="28"
+                height="28"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              > -->
+              <svg
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <rect x="2" y="2" width="9" height="9" />
+                <rect x="13" y="2" width="9" height="9" />
+                <rect x="2" y="13" width="9" height="9" />
+                <rect x="13" y="13" width="9" height="9" />
+              </svg>
+              <!-- </svg> -->
+            </div>
+            <h3>Windows</h3>
+            <span class="req-badge available">Available Now</span>
+            <ol>
+              <li><strong>OS:</strong> Windows 10 or later (64-bit)</li>
+              <li>
+                <strong>Runtime:</strong> Microsoft WebView2 Runtime
+                <span class="req-note"
+                  >(pre-installed on Windows 10 21H2+ and Windows 11)</span
+                >
+              </li>
+            </ol>
+            <p class="req-info">
+              No other dependencies needed the <code>.exe</code> installer
+              bundles everything.
+            </p>
+          </div>
+          <div class="req-card anim-fade">
+            <div class="req-icon">
+              <svg
+                width="28"
+                height="28"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="12" cy="4.5" r="1.8" />
+                <circle cx="5.5" cy="16" r="1.8" />
+                <circle cx="18.5" cy="16" r="1.8" />
+              </svg>
+            </div>
+            <h3>Ubuntu / Linux</h3>
+            <span class="req-badge available">Available Now</span>
+            <ol>
+              <li><strong>OS:</strong> Ubuntu 22.04+ (LTS recommended)</li>
+              <li>
+                <strong>Display Server:</strong> X11
+                <span class="req-note">(Wayland via XWayland)</span>
+              </li>
+              <li>
+                <strong>Dependencies:</strong> <code>libgtk-3-0</code>,
+                <code>libwebkit2gtk-4.1-0</code>, <code>xclip</code>,
+                <code>xsel</code>, <code>libayatana-appindicator3-1</code>,
+                <code>libxtst6</code>, <code>libsecret-1-0</code>
+              </li>
+            </ol>
+          </div>
+          <div class="req-card req-coming anim-fade">
+            <div class="req-icon">
+              <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg>
+            </div>
+            <h3>macOS</h3>
+            <span class="req-badge coming">Coming Soon</span>
+            <div class="coming-msg">
+              <p>🚧 We're actively working on macOS support!</p>
+              <p>Stay tuned — a native macOS build is on its way.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ubuntu Installation Section -->
+      <section class="install-guide anim-fade">
+        <div class="section-header">
+          <h2>Ubuntu <span class="gradient-text">Installation</span></h2>
+          <p>
+            Follow these steps to install ClipinVault on your Ubuntu or
+            Debian-based system.
+          </p>
+        </div>
+
+        <div class="install-container">
+          <!-- Method 1: Terminal -->
+          <div class="install-method">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+              Option 1: Via Terminal (Recommended)
+            </h3>
+            <p>
+              Using the terminal ensures all necessary dependencies are
+              automatically downloaded and configured.
+            </p>
+            <div class="terminal-box">
+              <div class="terminal-header">
+                <div class="terminal-dot t-red"></div>
+                <div class="terminal-dot t-yellow"></div>
+                <div class="terminal-dot t-green"></div>
+              </div>
+              <code>
+                <span class="comment"># 1. Update your package lists</span>
+                <span class="prompt">$</span>sudo apt update<br /><br />
+                <span class="comment"
+                  ># 2. Install using apt (handles all dependencies)</span
+                >
+                <span class="prompt">$</span>sudo apt install
+                ./clipinvault_1.3.3_amd64.deb
+              </code>
+            </div>
+          </div>
+
+          <!-- Method 2: App Installer -->
+          <div class="install-method">
+            <h3>
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" />
+              </svg>
+              Option 2: Via App Installer
+            </h3>
+            <p>
+              For a purely visual approach, you can use the built-in Ubuntu
+              Software Center or GDebi.
+            </p>
+            <ol class="gui-steps">
+              <li>Open your <strong>Downloads</strong> folder in Files.</li>
+              <li>
+                Right-click the <code>.deb</code> file and select
+                <strong>Open with Software Install</strong>.
+              </li>
+              <li>
+                Click the <strong>Install</strong> button and enter your
+                password.
+              </li>
+              <li>
+                Wait for the installation to complete and launch from your app
+                menu.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download CTA -->
+      <section class="download-cta" id="download">
+        <div class="section-header anim-fade">
+          <h2>Ready to <span class="gradient-text">Get Started?</span></h2>
+          <p>
+            Download ClipinVault for free and take control of your clipboard.
+          </p>
+        </div>
+        <div class="cta-group anim-fade">
+          <a
+            href="https://github.com/nhyadav/clipinvault/releases/download/v1.3.3/ClipinVaultSetup.exe"
+            class="btn btn-primary"
+            id="dl-win-cta"
+          >
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="9" height="9" /><rect x="13" y="2" width="9" height="9" /><rect x="2" y="13" width="9" height="9" /><rect x="13" y="13" width="9" height="9" /></svg>
+            Download for Windows
+          </a>
+          <a
+            href="https://github.com/nhyadav/clipinvault/releases/download/v1.3.3/clipinvault_1.3.3_amd64.deb"
+            class="btn btn-outline"
+            download
+            id="dl-ubuntu-cta"
+          >
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="4.5" r="1.8" fill="currentColor" /><circle cx="5.5" cy="16" r="1.8" fill="currentColor" /><circle cx="18.5" cy="16" r="1.8" fill="currentColor" /></svg>
+            Download for Ubuntu
+          </a>
+          <span class="btn btn-disabled" title="macOS support coming soon">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+            </svg>
+            macOS &mdash; Coming Soon
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img
+            src="assets/appicon.png?v=2"
+            alt="ClipinVault"
+            width="24"
+            height="24"
+          />
+          <span class="logo-text" style="font-size: 1.1rem">
+            <span class="logo-clipin">Clipin</span
+            ><span class="logo-vault">Vault</span>
+          </span>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 ClipinVault. All rights reserved. Designed and developed
+          by
+          <a href="https://github.com/nhyadav">Narayan Yadav</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Theme toggle
+      const toggle = document.getElementById("themeToggle");
+      const html = document.documentElement;
+      const stored = localStorage.getItem("cv-theme");
+      if (stored) {
+        html.setAttribute("data-theme", stored);
+      } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        html.setAttribute("data-theme", "light");
+      }
+      toggle.addEventListener("click", () => {
+        const next =
+          html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("cv-theme", next);
+      });
+
+      // Mobile menu
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+      function setMenuClosed() {
+        navLinks.classList.remove("open");
+        hamburger.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+        if (mobileQuery.matches) navLinks.setAttribute("aria-hidden", "true");
+      }
+
+      function setMenuOpen() {
+        navLinks.classList.add("open");
+        hamburger.classList.add("active");
+        hamburger.setAttribute("aria-expanded", "true");
+        navLinks.setAttribute("aria-hidden", "false");
+      }
+
+      function syncAriaToViewport() {
+        if (mobileQuery.matches) {
+          if (!navLinks.classList.contains("open")) {
+            navLinks.setAttribute("aria-hidden", "true");
+          }
+        } else {
+          navLinks.removeAttribute("aria-hidden");
+        }
+      }
+
+      hamburger.setAttribute("aria-expanded", "false");
+      syncAriaToViewport();
+      mobileQuery.addEventListener("change", syncAriaToViewport);
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.contains("open") ? setMenuClosed() : setMenuOpen();
+      });
+      navLinks.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", setMenuClosed),
+      );
+
+      // Scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".anim-fade")
+        .forEach((el) => observer.observe(el));
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const t = document.querySelector(a.getAttribute("href"));
+          if (t) t.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // SHA-256 checksum toggle
+      function toggleChecksum() {
+        const panel = document.getElementById("checksumPanel");
+        const btn = document.getElementById("checksumToggle");
+        const isOpen = panel.classList.toggle("open");
+        btn.setAttribute("aria-expanded", isOpen);
+        panel.setAttribute("aria-hidden", !isOpen);
+      }
+
+      // Copy hash to clipboard
+      function copyHash(id) {
+        const el = document.getElementById(id);
+        navigator.clipboard.writeText(el.textContent).then(() => {
+          const btn = el.nextElementSibling;
+          btn.style.color = "var(--accent)";
+          setTimeout(() => (btn.style.color = ""), 1500);
+        });
+      }
+
+      // macOS notify form
+      function handleMacNotify(e) {
+        e.preventDefault();
+        const form = document.getElementById("macosNotifyForm");
+        const success = document.getElementById("notifySuccess");
+        form.style.display = "none";
+        success.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
