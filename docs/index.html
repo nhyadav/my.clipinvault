@@ -118,10 +118,13 @@
             <h3>Ubuntu / Linux</h3>
             <ol class="step-list">
               <li>Download the <code>.deb</code> package from the <a href="../#download" style="color:var(--accent)">Downloads</a> section.</li>
-              <li>Install with: <code>sudo dpkg -i clipinvault_*.deb</code></li>
-              <li>If dependency errors appear, run: <code>sudo apt-get install -f</code></li>
-              <li>Launch from your application menu or run <code>clipinvault</code> in a terminal.</li>
+              <li>Install with: <code>sudo apt install ./clipinvault_*.deb</code> — using <code>apt</code> (not <code>dpkg -i</code>) automatically pulls in any missing system libraries including WebKit.</li>
+              <li>Launch from your application menu or run <code>ClipinVault</code> in a terminal.</li>
             </ol>
+            <div class="callout callout-info">
+              <span class="callout-icon">ℹ️</span>
+              <div>The <code>.deb</code> package supports <strong>Ubuntu 22.04 LTS and later</strong> (all releases). The WebKit runtime it depends on (<code>libwebkit2gtk-4.1-0</code>) is available in standard Ubuntu repositories on all supported versions — <code>apt</code> installs it automatically.</div>
+            </div>
 
             <h3>Upgrading</h3>
             <p>Run the new installer over the existing installation — it will close the running app, replace the binary, and relaunch. Your database, settings, and all clips are never touched during an upgrade.</p>
@@ -586,6 +589,13 @@
             <h3>My data disappeared after an update</h3>
             <p>This should <strong>never</strong> happen. The installer only replaces the application binary in the install directory — it never touches your data directory.</p>
             <p>If you lost data, the most likely cause was a manual uninstall that deleted <code>%LOCALAPPDATA%\ClipinVault</code> before reinstalling. Use <strong>File → Import</strong> to restore from a <code>.clipbundle</code> export if you have one.</p>
+
+            <h3>Linux install fails with "libwebkit2gtk-4.0-37 is not installable"</h3>
+            <p>You have an older <code>.deb</code> (pre-v1.3.3) that was built against the Ubuntu 22.04-era WebKit library, which was removed in Ubuntu 24.04+. Packages from v1.3.3 onwards use <code>libwebkit2gtk-4.1-0</code> which is available on Ubuntu 22.04 through 25.x and beyond.</p>
+            <ul>
+              <li><strong>Download the latest release</strong> — the error will not occur with v1.3.3+.</li>
+              <li>Always install using <code>sudo apt install ./clipinvault_*.deb</code> (not <code>dpkg -i</code>) so <code>apt</code> automatically resolves and installs the WebKit runtime.</li>
+            </ul>
 
             <h3>Large content is not being captured</h3>
             <p>ClipinVault captures up to <strong>5 MB</strong> per entry. Content exceeding this is silently skipped. If you regularly copy very large payloads (e.g. multi-MB log files), consider splitting or compressing them before copying.</p>
