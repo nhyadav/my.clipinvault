@@ -106,7 +106,7 @@
             <h3>Windows</h3>
             <ol class="step-list">
               <li>Download <strong>ClipinVaultSetup.exe</strong> from the <a href="../#download" style="color:var(--accent)">Downloads</a> section.</li>
-              <li>Run the installer- Windows may show a SmartScreen prompt - click <em>More info → Run anyway</em>.</li>
+              <li>Run the installer — Windows may show a SmartScreen prompt. Click <em>More info</em>, then <em>Run anyway</em>.</li>
               <li>Choose whether to create a desktop shortcut and whether to start with Windows.</li>
               <li>Click <em>Install</em>. ClipinVault launches automatically when finished.</li>
             </ol>
@@ -118,7 +118,7 @@
             <h3>Ubuntu / Linux</h3>
             <ol class="step-list">
               <li>Download the <code>.deb</code> package from the <a href="../#download" style="color:var(--accent)">Downloads</a> section.</li>
-              <li>Install with: <code>sudo apt install ./clipinvault_*.deb</code> — using <code>apt</code> (not <code>dpkg -i</code>) automatically pulls in any missing system libraries including WebKit.</li>
+              <li>Run <code>sudo apt install ./clipinvault_*.deb</code> to install — use <code>apt</code>, not <code>dpkg -i</code>, so any missing system libraries including WebKit are pulled in automatically.</li>
               <li>Launch from your application menu or run <code>ClipinVault</code> in a terminal.</li>
             </ol>
             <div class="callout callout-info">
@@ -437,7 +437,7 @@
               <li>The clip list and detail panel are replaced by a full-panel editor. Only the sidebar remains visible.</li>
               <li>Optionally enter a <strong>Title</strong> (up to 80 characters) at the top of the editor.</li>
               <li>Type or paste your content in the editor area. Line numbers are shown live; <kbd class="kbd">Tab</kbd> inserts 2 spaces and <kbd class="kbd">Enter</kbd> auto-indents to match the current line.</li>
-              <li>Use the <strong>type selector</strong> at the bottom left to choose a content type (<code>text</code>, <code>code</code>, <code>sql</code>, <code>json</code>, <code>url</code>, <code>cmd</code>, <code>mfa</code>, or <code>secret</code>).</li>
+              <li>Use the <strong>type selector</strong> at the bottom left to set the content type — <code>text</code>, <code>code</code>, <code>sql</code>, <code>json</code>, <code>url</code>, <code>cmd</code>, <code>mfa</code>, or <code>secret</code>.</li>
               <li>Click <strong>Save Clip</strong>. The new clip appears in the list and is selected automatically.</li>
             </ol>
 
@@ -499,7 +499,7 @@
               <li>Open <strong>Settings</strong> (gear icon in the top bar).</li>
               <li>Enable the <strong>Auto-Clean</strong> toggle.</li>
               <li>Set <strong>Max age (days)</strong>: clips older than this are deleted. Set to 0 to disable age-based cleanup.</li>
-              <li>Optionally set <strong>Min usage count</strong>: clips with fewer usages than this threshold are also deleted. Set to 0 to disable usage-based cleanup.</li>
+              <li>Optionally set <strong>Min usage count</strong>: clips used fewer times than this number are also deleted. Set to 0 to disable usage-based cleanup.</li>
             </ol>
 
             <h3>What is never auto-deleted</h3>
@@ -717,6 +717,22 @@
       });
 
       sections.forEach((sec) => tocObserver.observe(sec));
+
+      // Click-to-copy for terminal code blocks inside step-list items
+      document.querySelectorAll(".step-list li code").forEach((el) => {
+        el.title = "Click to copy";
+        el.addEventListener("click", () => {
+          navigator.clipboard.writeText(el.textContent).then(() => {
+            el.classList.add("code-copied");
+            const prev = el.title;
+            el.title = "Copied!";
+            setTimeout(() => {
+              el.classList.remove("code-copied");
+              el.title = prev;
+            }, 1500);
+          });
+        });
+      });
     </script>
   </body>
 </html>
