@@ -2752,17 +2752,11 @@ footer {
 .privacy-tldr-text strong { color: #4ade80; }
 
 /* Privacy: trust badge icon sits above h2 so heading gets full column width */
-.priv-icon {
-  display: block;
-  font-size: 2rem;
-  line-height: 1;
-  margin: 0.4rem 0 0.35rem;
-}
 /* Privacy: reduce h2 to fit the narrow left column at all viewport sizes */
 .privacy-section h2 {
   font-size: 1.4rem;
+  margin: 0;
 }
-.privacy-section h2 { margin-top: 0; }
 
 /* About: avatar + story header */
 .about-story-header {
